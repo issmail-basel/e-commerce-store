@@ -1,0 +1,16 @@
+<mat-toolbar color="header">
+  <a class="header__logo" [routerLink]="['/admin']"> e-commerce store </a>
+  <span class="l-spacer"></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
+    <img
+      class="header__profile-image"
+      src="assets/images/avatar-square.png"
+      alt="Profile Picture" />
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item (click)="logout.emit()">
+      <mat-icon>exit_to_app</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

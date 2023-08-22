@@ -1,0 +1,11 @@
+.header {
+    &__logo {
+        text-decoration: none;
+        color: #000;
+    }
+
+    &__profile-image {
+        border-radius: 50%;
+        width: 100%;
+    }
+}
