@@ -17,13 +17,13 @@ export const authGuard: CanActivateFn = (route): Promise<boolean> => {
           }
           resolve(true);
         } else {
-          router.navigate(['/login']);
+          router.navigate(['/auth/login']);
           resolve(false);
         }
       },
       error: error => {
         console.error('Error occurred during canActivate:', error);
-        router.navigate(['/login']);
+        router.navigate(['/auth/login']);
         resolve(false);
       },
     });

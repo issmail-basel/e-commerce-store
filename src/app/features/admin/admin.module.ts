@@ -9,9 +9,18 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { CdkAccordionModule } from '@angular/cdk/accordion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatListModule } from '@angular/material/list';
+import { DashboardCardComponent } from './containers/dashboard/components/dashboard-card/dashboard-card.component';
 
 @NgModule({
-  declarations: [AdminComponent, DashboardComponent, HeaderComponent],
+  declarations: [
+    AdminComponent,
+    DashboardComponent,
+    HeaderComponent,
+    DashboardCardComponent,
+  ],
   imports: [
     CommonModule,
     AdminRoutingModule,
@@ -19,6 +28,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatIconModule,
     MatMenuModule,
     MatButtonModule,
+    MatExpansionModule,
+    CdkAccordionModule,
+    MatListModule,
   ],
 })
 export class AdminModule {}
