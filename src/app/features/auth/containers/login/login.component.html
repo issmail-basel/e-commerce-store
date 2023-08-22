@@ -1,0 +1,33 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1 class="login-form-title">e-commerce store</h1>
+  <mat-form-field>
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" />
+    <mat-error *ngIf="hasEmailError('required')"
+      >Email is <strong>required</strong></mat-error
+    >
+    <mat-error *ngIf="hasEmailError('email')"
+      >Please enter a valid email address</mat-error
+    >
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input
+      [type]="isPassVisible ? 'text' : 'password'"
+      matInput
+      formControlName="password" />
+    <button
+      type="button"
+      matSuffix
+      mat-icon-button
+      (click)="isPassVisible = !isPassVisible">
+      <mat-icon>{{ isPassVisible ? 'visibility' : 'visibility_off' }}</mat-icon>
+    </button>
+    <mat-error *ngIf="hasPasswordError('required')"
+      >Password is <strong>required</strong></mat-error
+    >
+  </mat-form-field>
+
+  <button type="submit" mat-raised-button color="primary">Login</button>
+</form>
