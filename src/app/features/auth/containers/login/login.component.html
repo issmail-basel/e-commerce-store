@@ -1,13 +1,10 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <h1 class="login-form-title">e-commerce store</h1>
   <mat-form-field>
-    <mat-label>Email</mat-label>
-    <input matInput formControlName="email" />
-    <mat-error *ngIf="hasEmailError('required')"
-      >Email is <strong>required</strong></mat-error
-    >
-    <mat-error *ngIf="hasEmailError('email')"
-      >Please enter a valid email address</mat-error
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username" />
+    <mat-error *ngIf="hasUsernameError('required')"
+      >Username is <strong>required</strong></mat-error
     >
   </mat-form-field>
 

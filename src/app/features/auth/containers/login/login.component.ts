@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
   selector: 'ecs-login',
@@ -9,18 +11,22 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class LoginComponent {
   isPassVisible = false;
   loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
+    username: ['', Validators.required],
     password: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    private router: Router,
+    private authService: AuthService,
+    private fb: FormBuilder
+  ) {}
 
   get loginFormControl() {
     return this.loginForm.controls;
   }
 
-  hasEmailError(errorType: string): boolean {
-    return this.loginFormControl.email.hasError(errorType);
+  hasUsernameError(errorType: string): boolean {
+    return this.loginFormControl.username.hasError(errorType);
   }
 
   hasPasswordError(errorType: string): boolean {
@@ -29,8 +35,21 @@ export class LoginComponent {
 
   onSubmit() {
     if (this.loginForm.valid) {
-      // TODO: implement
-      console.log('Form Submitted Successfully');
+      if (this.loginForm.valid) {
+        this.authService
+          .login(
+            this.loginForm.value.username ?? '',
+            this.loginForm.value.password ?? ''
+          )
+          .subscribe({
+            next: () => {
+              this.router.navigate(['/']);
+            },
+            error: error => {
+              console.error('Error occurred during canActivate:', error);
+            },
+          });
+      }
     }
   }
 }
