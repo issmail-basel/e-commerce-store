@@ -1,0 +1,30 @@
+.dashboard-card {
+    cursor: pointer;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    display: flex;
+    padding: 1rem;
+    transition: transform .2s ease-out;
+    transform: translateY(0);
+
+    &__text {
+        flex: 1;
+    }
+
+    &__image {
+        width: 35%;
+        text-align: right;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 150px;
+        }
+    }
+
+    &:hover {
+        transition: transform .2s ease-out;
+        transform: translateY(-8px);
+        background-color: #F5F5F5;
+    }
+}

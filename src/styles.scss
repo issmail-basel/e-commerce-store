@@ -3,6 +3,10 @@
 html,
 body {
   height: 100%;
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
 body {
@@ -13,4 +17,8 @@ body {
 
 mat-form-field {
   width: 100%;
+}
+
+.l-spacer {
+  flex: 1 1 auto;
 }

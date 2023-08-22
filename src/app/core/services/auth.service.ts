@@ -19,7 +19,7 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  login(username: string, password: string): Observable<User | null> {
+  login(username: string, password: string): Observable<User> {
     const user = usersResopnse.find(
       u => u.username === username && u.password === password
     );
@@ -46,6 +46,7 @@ export class AuthService {
   getMeValue(): Observable<User | null> {
     const user = usersResopnse.find(u => u.token === this.getToken());
     if (user) {
+      this.setUserSubject(user);
       return of(user);
     }
     localStorage.removeItem('bearerToken');

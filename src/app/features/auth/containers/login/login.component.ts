@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { User } from 'src/app/core/models/User';
 import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
@@ -42,8 +43,8 @@ export class LoginComponent {
             this.loginForm.value.password ?? ''
           )
           .subscribe({
-            next: () => {
-              this.router.navigate(['/']);
+            next: (user: User) => {
+              this.router.navigate([user.role === 'admin' ? 'admin' : 'user']);
             },
             error: error => {
               console.error('Error occurred during canActivate:', error);
