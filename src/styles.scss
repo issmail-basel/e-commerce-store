@@ -19,6 +19,32 @@ mat-form-field {
   width: 100%;
 }
 
+$breakpoints: (
+  small: 576px,
+  medium: 768px,
+  large: 992px,
+  xlarge: 1360px,
+);
+
+.l-container {
+  padding: 15px;
+  margin: 0 auto;
+
+  max-width: map-get($breakpoints, small);
+
+  @media (min-width: map-get($breakpoints, medium)) {
+    max-width: map-get($breakpoints, medium);
+  }
+
+  @media (min-width: map-get($breakpoints, large)) {
+    max-width: calc(100% - 184px);
+  }
+
+  @media (min-width: 1500px) {
+    max-width: map-get($breakpoints, xlarge);
+  }
+}
+
 .l-spacer {
   flex: 1 1 auto;
 }

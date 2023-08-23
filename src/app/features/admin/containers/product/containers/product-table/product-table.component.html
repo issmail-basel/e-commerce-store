@@ -1,0 +1,59 @@
+<div *ngIf="products$ | async as products" class="l-container">
+  <div class="datatable">
+    <button
+      [routerLink]="['/products/add']"
+      matTooltip="Add new Item"
+      mat-fab
+      color="primary">
+      <i class="material-icons">add</i>
+    </button>
+
+    <!-- <mat-paginator [length]="10" [pageSize]="4"></mat-paginator> -->
+    <div class="responsive-table">
+      <table
+        mat-table
+        [dataSource]="products"
+        matSort
+        matSortActive=""
+        matSortDisableClear>
+        <!-- Title Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
+          <td mat-cell *matCellDef="let row">{{ row.title }}</td>
+        </ng-container>
+
+        <!-- Price Column -->
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+          <td mat-cell *matCellDef="let row">{{ row.price | currency }}</td>
+        </ng-container>
+
+        <!-- Description Column -->
+        <ng-container matColumnDef="description">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+          <td mat-cell *matCellDef="let row">{{ row.description }}</td>
+        </ng-container>
+
+        <!-- Category Column -->
+        <ng-container matColumnDef="category">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Category</th>
+          <td mat-cell *matCellDef="let row">{{ row.category }}</td>
+        </ng-container>
+
+        <!-- Image Column -->
+        <ng-container matColumnDef="image">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Image</th>
+          <td mat-cell *matCellDef="let row">
+            <img
+              class="responsive-table__img"
+              [src]="row.image"
+              [alt]="row.title" />
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+  </div>
+</div>
