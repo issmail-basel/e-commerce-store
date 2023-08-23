@@ -27,7 +27,7 @@ export class AuthService {
       localStorage.setItem('bearerToken', user.token);
       return of(user);
     }
-    return throwError(new Error('Invalid username or password'));
+    return throwError(() => new Error('Invalid username or password'));
   }
 
   logout(): void {

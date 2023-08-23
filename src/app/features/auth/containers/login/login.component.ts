@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { User } from 'src/app/core/models/User';
 import { AuthService } from 'src/app/core/services/auth.service';
@@ -19,7 +20,8 @@ export class LoginComponent {
   constructor(
     private router: Router,
     private authService: AuthService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private _snackBar: MatSnackBar
   ) {}
 
   get loginFormControl() {
@@ -48,6 +50,7 @@ export class LoginComponent {
             },
             error: error => {
               console.error('Error occurred during canActivate:', error);
+              this._snackBar.open(error.message, 'close');
             },
           });
       }
