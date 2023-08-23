@@ -32,6 +32,7 @@ export class AuthService {
 
   logout(): void {
     localStorage.removeItem('bearerToken');
+    this.setUserSubject(userState);
   }
 
   isLoggedIn(): boolean {
