@@ -14,6 +14,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ProductsSectionComponent } from './components/products-section/products-section.component';
 import { ProductCardComponent } from './components/products-section/product-card/product-card.component';
+import { ProductDetailsComponent } from './containers/product-details/product-details.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
+import { ProductDetailsCardComponent } from './components/product-details-card/product-details-card.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,9 @@ import { ProductCardComponent } from './components/products-section/product-card
     SearchFieldComponent,
     ProductsSectionComponent,
     ProductCardComponent,
+    ProductDetailsComponent,
+    BreadcrumbComponent,
+    ProductDetailsCardComponent,
   ],
   imports: [
     CommonModule,

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './user.component';
 import { ProductsPageComponent } from './containers/products-page/products-page.component';
+import { ProductDetailsComponent } from './containers/product-details/product-details.component';
 
 const routes: Routes = [
   {
@@ -9,6 +10,7 @@ const routes: Routes = [
     component: UserComponent,
     children: [
       { path: '', component: ProductsPageComponent },
+      { path: ':id', component: ProductDetailsComponent },
       {
         path: '**',
         redirectTo: '',

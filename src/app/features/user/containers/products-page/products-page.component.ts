@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
   ProductsListState,
   ProductsPageFacade,
-} from './services/products-page.facade.service';
+} from './products-page.facade.service';
 import { Observable } from 'rxjs';
 
 @Component({

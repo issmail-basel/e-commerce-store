@@ -2,9 +2,9 @@ import { Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BehaviorSubject, combineLatest, Observable } from 'rxjs';
 import { distinctUntilChanged, map, switchMap } from 'rxjs/operators';
-import { Product } from '../models/product';
-import { ProductService } from './product.service';
-import { CategoryService } from './category.service';
+import { Product } from '../../models/product';
+import { ProductService } from '../../services/product.service';
+import { CategoryService } from '../../services/category.service';
 
 export type ProductsListState = {
   products: Product[];

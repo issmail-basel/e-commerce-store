@@ -28,4 +28,8 @@ export class ProductService {
         )
       );
   }
+
+  getProductById(id: string): Observable<Product> {
+    return this.http.get<Product>(`${productAPI}/${id}`);
+  }
 }
