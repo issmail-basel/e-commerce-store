@@ -1,8 +1,15 @@
 <div
+  [style.boxShadow]="
+    selectedCategory === category ? '0px 3px 15px ' + color[category] : shadow
+  "
   [routerLink]="['/homepage']"
   [queryParams]="{ category: category }"
   queryParamsHandling="merge"
-  class="category-card">
+  class="category-card"
+  (mouseover)="toggleColoredShadow($event, category)"
+  (focus)="toggleColoredShadow($event, category)"
+  (mouseout)="toggleColoredShadow($event, category)"
+  (blur)="toggleColoredShadow($event, category)">
   <div class="category-card__image-wrapper">
     <img [src]="'assets/images/' + category + '.png'" [alt]="category" />
   </div>
