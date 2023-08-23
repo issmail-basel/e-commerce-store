@@ -1,0 +1,34 @@
+<div
+  class="product-details l-wrapper"
+  *ngIf="productDetailsState$ | async as productDetailsState">
+  <ng-container *ngIf="productDetailsState">
+    <ecs-breadcrumb
+      [breadcrumb]="[
+        { url: '/homepage', title: 'Home' },
+        { title: productDetailsState.title }
+      ]" />
+
+    <div class="product-details__section">
+      <div class="product-details__col">
+        <div
+          class="product-details__image"
+          style="--color-category-hover: {{
+            transparentColor[productDetailsState.category]
+          }}">
+          <img
+            [src]="productDetailsState.image"
+            [alt]="productDetailsState.title" />
+          <div class="product-details__overlay"></div>
+        </div>
+      </div>
+      <div class="product-details__col">
+        <div class="product-details__inner-wrapper">
+          <ecs-product-details-card
+            class="product-details__card"
+            [product]="productDetailsState" />
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

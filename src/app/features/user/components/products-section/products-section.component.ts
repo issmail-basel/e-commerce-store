@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Product } from '../../containers/products-page/models/product';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'ecs-products-section',

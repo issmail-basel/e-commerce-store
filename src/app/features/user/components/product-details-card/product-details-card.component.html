@@ -1,0 +1,14 @@
+<div class="product-details-card">
+  <h1 class="product-details-card__title-wrapper">
+    <h1 class="product-details-card__title">
+      {{ product.title }}
+    </h1>
+  </h1>
+
+  <p class="product-details-card__subtitle">
+    {{ product.category }}
+  </p>
+  <p
+    class="product-details-card__description"
+    [innerHTML]="product.description"></p>
+</div>
