@@ -4,6 +4,12 @@
   "newProjectRoot": "projects",
   "projects": {
     "e-commerce-store": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ar-SA": "src/locale/messages.ar.xlf"
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -59,6 +65,10 @@
                   "with": "src/environments/environment.development.ts"
                 }
               ]
+            },
+            "ar": {
+              "localize": ["ar-SA"],
+              "i18nMissingTranslation": "error"
             }
           },
           "defaultConfiguration": "production"
@@ -71,6 +81,9 @@
             },
             "development": {
               "browserTarget": "e-commerce-store:build:development"
+            },
+            "ar": {
+              "browserTarget": "e-commerce-store:build:ar"
             }
           },
           "defaultConfiguration": "development"
