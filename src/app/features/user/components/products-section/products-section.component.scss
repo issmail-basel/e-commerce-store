@@ -1,0 +1,16 @@
+.products-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.5rem;
+
+    .products-section__grid__item {
+        flex: 0 0 calc(100% / 5);
+        max-width: calc(100% / 5);
+        padding: 1.5rem .5rem;
+
+        @media screen and (max-width: 768px) {
+            flex: 1 1 50% !important;
+            max-width: 50% !important;
+        }
+    }
+}

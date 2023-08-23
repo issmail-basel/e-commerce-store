@@ -1,10 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { map } from 'rxjs/operators';
-
-type CategoryColors = {
-  [key: string]: string;
-};
+import { color } from '../../../constants/product-colors';
 
 @Component({
   selector: 'ecs-category-card',
@@ -15,14 +12,12 @@ export class CategoryCardComponent implements OnInit {
   @Input() category!: string;
   selectedCategory!: string;
   shadow = '0px 3px 15px rgba(0,0,0,0.2)';
-  color: CategoryColors = {
-    electronics: '#4682B4',
-    jewelery: '#B76E79',
-    "men's clothing": '#228B22',
-    "women's clothing": '#9370DB',
-  };
+  color = color;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) {}
 
   toggleColoredShadow($event: MouseEvent | FocusEvent, category: string) {
     this.shadow =
@@ -32,8 +27,24 @@ export class CategoryCardComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.queryParams.pipe(map(value => value)).subscribe(values => {
-      this.selectedCategory = values['category'] ? values['category'] : null;
-    });
+    this.route.queryParams
+      .pipe(map(value => value))
+      .subscribe((values: Params) => {
+        this.selectedCategory = values['category'] ? values['category'] : null;
+      });
+  }
+
+  changeCategory(category: string) {
+    if (this.selectedCategory === category) {
+      this.router.navigate(['/homepage'], {
+        queryParams: { category: '' },
+        queryParamsHandling: 'merge',
+      });
+    } else {
+      this.router.navigate(['/homepage'], {
+        queryParams: { category },
+        queryParamsHandling: 'merge',
+      });
+    }
   }
 }

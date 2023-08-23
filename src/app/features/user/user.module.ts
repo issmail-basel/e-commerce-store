@@ -12,6 +12,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { SearchFieldComponent } from './components/search-field/search-field.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { ProductsSectionComponent } from './components/products-section/products-section.component';
+import { ProductCardComponent } from './components/products-section/product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { MatInputModule } from '@angular/material/input';
     CategoryCardComponent,
     ProductsPageComponent,
     SearchFieldComponent,
+    ProductsSectionComponent,
+    ProductCardComponent,
   ],
   imports: [
     CommonModule,

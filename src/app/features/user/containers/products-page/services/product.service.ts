@@ -19,7 +19,11 @@ export class ProductService {
           products.filter(
             product =>
               (!category || product.category === category) &&
-              (!searchValue || product.description.includes(searchValue))
+              (!searchValue ||
+                product.title
+                  .toLowerCase()
+                  .trim()
+                  .includes(searchValue.toLowerCase().trim()))
           )
         )
       );
