@@ -1,0 +1,14 @@
+<div
+  class="product"
+  style="--color-category-hover: {{ transparentColor[product.category] }}">
+  <div class="product__image" [routerLink]="['/homepage/' + product.id]">
+    <img [src]="product.image" [alt]="product.title" />
+    <div class="product__overlay"></div>
+  </div>
+  <div class="product__name">
+    {{ product.title }}
+  </div>
+  <div class="product__price">
+    {{ product.price }}
+  </div>
+</div>

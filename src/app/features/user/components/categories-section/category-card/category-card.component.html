@@ -2,8 +2,7 @@
   [style.boxShadow]="
     selectedCategory === category ? '0px 3px 15px ' + color[category] : shadow
   "
-  [routerLink]="['/homepage']"
-  [queryParams]="{ category: category }"
+  (click)="changeCategory(category)"
   queryParamsHandling="merge"
   class="category-card"
   (mouseover)="toggleColoredShadow($event, category)"
