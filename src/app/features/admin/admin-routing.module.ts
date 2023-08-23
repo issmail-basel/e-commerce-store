@@ -11,6 +11,13 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent },
       {
+        path: 'products',
+        loadChildren: () =>
+          import('./containers/product/product.module').then(
+            m => m.ProductModule
+          ),
+      },
+      {
         path: '**',
         redirectTo: '/admin',
         pathMatch: 'full',
