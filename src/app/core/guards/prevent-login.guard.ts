@@ -10,7 +10,7 @@ export const preventLoginGuard: CanActivateFn = (): Promise<boolean> => {
     authService.getMeValue().subscribe({
       next: (user: User | null) => {
         if (user) {
-          router.navigate(['/']); // TODO: Redirect by role?
+          router.navigate([user.role === 'admin' ? '/admin' : '/homepage']); // TODO: Redirect by role?
           resolve(false);
         } else {
           resolve(true);
