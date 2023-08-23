@@ -54,7 +54,7 @@ export class ProductsPageFacade {
           });
           return this.productsService.searchProduct(
             queryParams['category'],
-            queryParams['value']
+            queryParams['search']
           );
         })
       )
