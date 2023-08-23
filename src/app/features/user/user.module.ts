@@ -9,6 +9,9 @@ import { CategoriesSectionComponent } from './components/categories-section/cate
 import { CategoryCardComponent } from './components/categories-section/category-card/category-card.component';
 import { ProductsPageComponent } from './containers/products-page/products-page.component';
 import { MatIconModule } from '@angular/material/icon';
+import { SearchFieldComponent } from './components/search-field/search-field.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -17,7 +20,15 @@ import { MatIconModule } from '@angular/material/icon';
     CategoriesSectionComponent,
     CategoryCardComponent,
     ProductsPageComponent,
+    SearchFieldComponent,
   ],
-  imports: [CommonModule, UserRoutingModule, MatMenuModule, MatIconModule],
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    MatMenuModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+  ],
 })
 export class UserModule {}
