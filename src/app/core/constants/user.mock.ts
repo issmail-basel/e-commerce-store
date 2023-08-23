@@ -8,7 +8,7 @@ export const usersResopnse: (User & { password: string })[] = [
     role: 'admin',
   },
   {
-    token: 'bearer adminToken',
+    token: 'bearer userToken',
     password: 'user',
     role: 'user',
     username: 'user',

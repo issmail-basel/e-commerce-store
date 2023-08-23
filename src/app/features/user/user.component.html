@@ -1,0 +1,3 @@
+<ng-container *ngIf="user$ | async as user">
+  <ecs-header [user]="user" (logout)="logout()" /> <router-outlet />
+</ng-container>

@@ -46,7 +46,7 @@ export class LoginComponent {
           )
           .subscribe({
             next: (user: User) => {
-              this.router.navigate([user.role === 'admin' ? 'admin' : 'user']);
+              this.router.navigate([user.role === 'admin' ? 'admin' : '']);
             },
             error: error => {
               console.error('Error occurred during canActivate:', error);
