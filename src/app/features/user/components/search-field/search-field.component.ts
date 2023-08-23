@@ -1,10 +1,4 @@
-import {
-  Component,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-  OnInit,
-} from '@angular/core';
+import { Component, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
 import { fromEvent } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map } from 'rxjs/operators';
 import { ActivatedRoute, Router } from '@angular/router';
