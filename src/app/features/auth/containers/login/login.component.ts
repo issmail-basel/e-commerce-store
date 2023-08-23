@@ -50,7 +50,7 @@ export class LoginComponent {
             },
             error: error => {
               console.error('Error occurred during canActivate:', error);
-              this._snackBar.open(error.message);
+              this._snackBar.open(error.message, 'close');
             },
           });
       }
