@@ -1,12 +1,10 @@
 <div *ngIf="user$ | async as user" class="dashboard">
-  <div class="dashboard-image">
-    <div class="img-wrapper">
-      <img src="assets/images/avatar-square.png" alt="Profile Picture" />
-    </div>
+  <div class="dashboard__image">
+    <img src="assets/images/avatar-square.png" alt="Profile Picture" />
   </div>
   <h1 class="dashboard__title">Welcome, {{ user.username }}</h1>
-  <div class="dashboard-wrapper">
-    <div class="wrwr">
+  <div class="dashboard__container">
+    <div class="dashboard__row">
       <ecs-dashboard-card
         title="User Profile"
         subTitle="View your data, change language."
@@ -14,7 +12,8 @@
       <ecs-dashboard-card
         title="Products"
         subTitle="Add edit or delete data related to products."
-        image="products" />
+        image="products"
+        link="/admin/products" />
     </div>
   </div>
 </div>
