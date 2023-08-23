@@ -1,5 +1,5 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <h1 class="login-form-title" i18n>e-commerce store</h1>
+  <h1 class="login-form__title" i18n>e-commerce store</h1>
   <mat-form-field>
     <mat-label>Username</mat-label>
     <input matInput formControlName="username" />
@@ -26,5 +26,9 @@
     >
   </mat-form-field>
 
-  <button type="submit" mat-raised-button color="primary">Login</button>
+  <div class="login-form__actions">
+    <button type="submit" mat-raised-button color="primary">Login</button>
+
+    <ecs-language-switcher />
+  </div>
 </form>

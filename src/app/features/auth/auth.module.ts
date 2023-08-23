@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [AuthComponent, LoginComponent],
@@ -24,6 +25,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatInputModule,
     MatButtonModule,
     MatCheckboxModule,
+    SharedModule,
   ],
 })
 export class AuthModule {}

@@ -1,0 +1,12 @@
+<footer class="language-footer">
+  <span *ngIf="currentLocale === 'en-US'">
+    <button mat-button (click)="changeLanguage('ar-SA')">
+      Switch to Arabic
+    </button></span
+  >
+  <span *ngIf="currentLocale === 'ar-SA'">
+    <button mat-button color="primary" (click)="changeLanguage('en-US')">
+      تغيير اللغة إلى الانكليزية
+    </button></span
+  >
+</footer>

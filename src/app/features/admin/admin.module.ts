@@ -13,6 +13,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { DashboardCardComponent } from './containers/dashboard/components/dashboard-card/dashboard-card.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { DashboardCardComponent } from './containers/dashboard/components/dashbo
     MatExpansionModule,
     CdkAccordionModule,
     MatListModule,
+    SharedModule,
   ],
 })
 export class AdminModule {}

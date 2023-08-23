@@ -73,8 +73,10 @@
               ]
             },
             "ar": {
+              "outputPath": "dist/e-commerce-store/ar",
               "localize": ["ar-SA"],
-              "i18nMissingTranslation": "error"
+              "i18nMissingTranslation": "error",
+              "baseHref": "/ar/"
             }
           },
           "defaultConfiguration": "production"

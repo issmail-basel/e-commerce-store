@@ -17,6 +17,7 @@ import { ProductCardComponent } from './components/products-section/product-card
 import { ProductDetailsComponent } from './containers/product-details/product-details.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { ProductDetailsCardComponent } from './components/product-details-card/product-details-card.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ProductDetailsCardComponent } from './components/product-details-card/p
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
+    SharedModule,
   ],
 })
 export class UserModule {}
