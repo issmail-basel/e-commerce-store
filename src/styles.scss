@@ -45,6 +45,23 @@ $breakpoints: (
   }
 }
 
+.l-wrapper {
+  display: block;
+  margin-top: 14rem; //16rem;
+  padding: 0 7rem;
+
+  @media screen and (max-width: 1200px) {
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-top: 8rem;
+  }
+}
+
 .l-spacer {
   flex: 1 1 auto;
 }

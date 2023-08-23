@@ -1,0 +1,10 @@
+<div
+  [routerLink]="['/homepage']"
+  [queryParams]="{ category: category }"
+  queryParamsHandling="merge"
+  class="category-card">
+  <div class="category-card__image-wrapper">
+    <img [src]="'assets/images/' + category + '.png'" [alt]="category" />
+  </div>
+  <p [style.color]="color[category]">{{ category }}</p>
+</div>

@@ -1,0 +1,8 @@
+<div
+  class="products-page l-wrapper"
+  *ngIf="productsListState$ | async as productsListState">
+  <div *ngIf="productsListState.categories.length > 0">
+    <ecs-categories-section
+      [categories]="productsListState.categories"></ecs-categories-section>
+  </div>
+</div>
