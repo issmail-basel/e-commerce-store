@@ -2,12 +2,248 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
+      <trans-unit id="4146830966635061119" datatype="html">
+        <source>Welcome,</source>
+        <target>مرحبا،</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7744292213705278878" datatype="html">
+        <source>User Profile</source>
+        <target>ملف المستخدم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8623633087460670453" datatype="html">
+        <source>View your data, change language.</source>
+         <target>عرض بياناتك، تغيير اللغة.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6707361102856436710" datatype="html">
+        <source>Products</source>
+          <target>المنتجات</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="484809885234768345" datatype="html">
+        <source>Add edit or delete data related to products.</source>
+        <target>أضف أو عدل أو احذف البيانات المتعلقة بالمنتجات.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/dashboard/dashboard.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7616770651914901276" datatype="html">
+        <source>Product</source>
+        <target>منتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7868939987477532477" datatype="html">
+        <source> Add new product </source>
+         <target> أضف منتج جديد </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">15,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3137610003092039022" datatype="html">
+        <source> Edit product </source>
+         <target> تعديل المنتج </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5395564722234771687" datatype="html">
+        <source>Product Info</source>
+        <target>معلومات المنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5701618810648052610" datatype="html">
+        <source>Title</source>
+        <target>الاسم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-table/product-table.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7208033622007004994" datatype="html">
+        <source> Title is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target> الاسم <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>مطلوب<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1806667489382256324" datatype="html">
+        <source>Category</source>
+        <target>الفئة</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8520046725411845662" datatype="html">
+        <source> Category is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target> الفئة <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>مطلوبة<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">58,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8894377483833272091" datatype="html">
+        <source>Price</source>
+         <target>السعر</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-table/product-table.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4185151500966066993" datatype="html">
+        <source> Price is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target> السعر <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>مطلوب<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>       
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+         <target>الوصف</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-form/product-form.component.html</context>
+          <context context-type="linenumber">77</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3563823504206575540" datatype="html">
+        <source> Description </source>
+        <target> الوصف </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-table/product-table.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5186038954367142316" datatype="html">
+        <source> Category </source>
+        <target> الفئة </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-table/product-table.component.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3012906865384504293" datatype="html">
+        <source>Image</source>
+        <target>صورة المنتج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/containers/product/containers/product-table/product-table.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4622263538168444486" datatype="html">
+        <source> e-commerce store </source>
+        <target> متجر التجارة الإلكترونية </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/layout/header/header.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/user/layout/header/header.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3797778920049399855" datatype="html">
+        <source>Logout</source>
+        <target>تسجيل الخروج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/admin/layout/header/header.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
       <trans-unit id="7729103437359042086" datatype="html">
         <source>e-commerce store</source>
         <target>متجر التجارة الإلكترونية</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/features/auth/containers/login/login.component.html</context>
           <context context-type="linenumber">2</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5248717555542428023" datatype="html">
+        <source>Username</source>
+        <target>اسم المستخدم</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/auth/containers/login/login.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8135330612788735728" datatype="html">
+        <source>Username is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target>اسم المستخدم <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>مطلوب<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/auth/containers/login/login.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1431416938026210429" datatype="html">
+        <source>Password</source>
+        <target>كلمة المرور</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/auth/containers/login/login.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2323435677844786277" datatype="html">
+        <source>Password is <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>required<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></source>
+        <target>كلمة المرور <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>مطلوبة<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/auth/containers/login/login.component.html</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2454050363478003966" datatype="html">
+        <source>Login</source>
+        <target>تسجيل الدخول</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/auth/containers/login/login.component.html</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3712763448239725249" datatype="html">
+          <source>Search here</source>
+          <target>ابحث هنا</target>
+          <context-group purpose="location">
+              <context context-type="sourcefile">src/app/features/user/components/search-field/search-field.component.html</context>
+              <context context-type="linenumber">7</context>
+          </context-group>
+      </trans-unit>
+      <trans-unit id="5113165610004622651" datatype="html">
+        <source>Log Out</source>
+        <target>تسجيل الخروج</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/features/user/layout/header/header.component.html</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
     </body>

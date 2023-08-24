@@ -2,14 +2,20 @@
   <div class="dashboard__image">
     <img src="assets/images/avatar-square.png" alt="Profile Picture" />
   </div>
-  <h1 class="dashboard__title">Welcome, {{ user.username }}</h1>
+  <h1 class="dashboard__title">
+    <span i18n>Welcome,</span> {{ user.username }}
+  </h1>
   <div class="dashboard__container">
     <div class="dashboard__row">
       <ecs-dashboard-card
+        i18n-title
+        i18n-subTitle
         title="User Profile"
         subTitle="View your data, change language."
         image="profile" />
       <ecs-dashboard-card
+        i18n-title
+        i18n-subTitle
         title="Products"
         subTitle="Add edit or delete data related to products."
         image="products"
