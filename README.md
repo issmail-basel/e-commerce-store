@@ -47,6 +47,27 @@ Execute the unit tests via [Karma](https://karma-runner.github.io) with:
 ng test
 ```
 
+### Tests details
+I've added unit testing for various cases. Added unit tests for services, components, and interceptors.
+
+
+#### **AuthService**
+
+- **should fetch user data**: This test ensures that the `AuthService` correctly fetches user data from the backend mock.
+  
+- **should be created**: Validates that the `AuthService` is properly instantiated when required.
+
+#### **SearchFieldComponent**
+
+- **should update search query when input changes**: This test checks if the search query updates in real-time as the user types in the search field.
+  
+- **should create**: Ensures that the `SearchFieldComponent` is correctly instantiated and rendered.
+
+#### **ApiInterceptor**
+
+- **should prepend baseURL to the request URL**: Validates that the `ApiInterceptor` correctly prepends the `baseURL` from the environment configuration to every HTTP request.
+
+
 ## Examples
 
 ### Push-based Architectures with RxJS
