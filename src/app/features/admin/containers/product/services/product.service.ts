@@ -18,4 +18,12 @@ export class ProductService {
   getSingleProducts(id: string): Observable<Product> {
     return this.http.get<Product>(`${productAPI}/${id}`);
   }
+
+  createProduct(product: Omit<Product, 'id'>): Observable<Product> {
+    return this.http.post<Product>(productAPI, product);
+  }
+
+  editProduct(product: Partial<Product>, id: string): Observable<Product> {
+    return this.http.put<Product>(`${productAPI}/${id}`, product);
+  }
 }

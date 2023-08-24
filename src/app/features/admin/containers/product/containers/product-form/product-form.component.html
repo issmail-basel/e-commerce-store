@@ -1,0 +1,74 @@
+<form class="ecsform" [formGroup]="productForm" #formDirective="ngForm">
+  <div class="ecsform__breadcrumb">
+    <div class="return">
+      <a mat-icon-button [routerLink]="['/admin/products']">
+        <mat-icon>arrow_back</mat-icon>
+      </a>
+      <h1>Product</h1>
+    </div>
+    <div *ngIf="!isEditMode">
+      <button
+        type="submit"
+        mat-flat-button
+        color="primary"
+        (click)="addNew(formDirective)">
+        Add new product
+      </button>
+    </div>
+    <div *ngIf="isEditMode">
+      <button type="submit" mat-flat-button color="primary" (click)="edit()">
+        Edit product
+      </button>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-col">
+      <div class="ecsform__card">
+        <h2>Product Info</h2>
+        <table class="form-field" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="form-field">
+                <mat-label>Title</mat-label>
+                <input matInput formControlName="title" />
+                <mat-error
+                  *ngIf="productFormControl['title'].hasError('required')">
+                  Title is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <table class="form-field" cellspacing="0">
+          <tr>
+            <td>
+              <mat-form-field class="form-field">
+                <mat-label>Category</mat-label>
+                <input matInput formControlName="category" />
+                <mat-error
+                  *ngIf="productFormControl['category'].hasError('required')">
+                  Category is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </td>
+            <td>
+              <mat-form-field class="form-field">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" />
+                <mat-error
+                  *ngIf="productFormControl['price'].hasError('required')">
+                  Price is <strong>required</strong>
+                </mat-error>
+              </mat-form-field>
+            </td>
+          </tr>
+        </table>
+        <mat-form-field class="form-field">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</form>
