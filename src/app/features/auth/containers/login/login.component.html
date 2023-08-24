@@ -1,15 +1,15 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <h1 class="login-form__title" i18n>e-commerce store</h1>
+  <h1 class="login-form-title" i18n>e-commerce store</h1>
   <mat-form-field>
-    <mat-label>Username</mat-label>
+    <mat-label i18n>Username</mat-label>
     <input matInput formControlName="username" />
-    <mat-error *ngIf="hasUsernameError('required')"
+    <mat-error *ngIf="hasUsernameError('required')" i18n
       >Username is <strong>required</strong></mat-error
     >
   </mat-form-field>
 
   <mat-form-field>
-    <mat-label>Password</mat-label>
+    <mat-label i18n>Password</mat-label>
     <input
       [type]="isPassVisible ? 'text' : 'password'"
       matInput
@@ -21,14 +21,10 @@
       (click)="isPassVisible = !isPassVisible">
       <mat-icon>{{ isPassVisible ? 'visibility' : 'visibility_off' }}</mat-icon>
     </button>
-    <mat-error *ngIf="hasPasswordError('required')"
+    <mat-error *ngIf="hasPasswordError('required')" i18n
       >Password is <strong>required</strong></mat-error
     >
   </mat-form-field>
 
-  <div class="login-form__actions">
-    <button type="submit" mat-raised-button color="primary">Login</button>
-
-    <ecs-language-switcher />
-  </div>
+  <button type="submit" mat-raised-button color="primary" i18n>Login</button>
 </form>

@@ -4,19 +4,25 @@
       <a mat-icon-button [routerLink]="['/admin/products']">
         <mat-icon>arrow_back</mat-icon>
       </a>
-      <h1>Product</h1>
+      <h1 i18n>Product</h1>
     </div>
     <div *ngIf="!isEditMode">
       <button
         type="submit"
         mat-flat-button
         color="primary"
-        (click)="addNew(formDirective)">
+        (click)="addNew(formDirective)"
+        i18n>
         Add new product
       </button>
     </div>
     <div *ngIf="isEditMode">
-      <button type="submit" mat-flat-button color="primary" (click)="edit()">
+      <button
+        type="submit"
+        mat-flat-button
+        color="primary"
+        (click)="edit()"
+        i18n>
         Edit product
       </button>
     </div>
@@ -25,15 +31,16 @@
   <div class="form-row">
     <div class="form-col">
       <div class="ecsform__card">
-        <h2>Product Info</h2>
+        <h2 i18n>Product Info</h2>
         <table class="form-field" cellspacing="0">
           <tr>
             <td>
               <mat-form-field class="form-field">
-                <mat-label>Title</mat-label>
+                <mat-label i18n>Title</mat-label>
                 <input matInput formControlName="title" />
                 <mat-error
-                  *ngIf="productFormControl['title'].hasError('required')">
+                  *ngIf="productFormControl['title'].hasError('required')"
+                  i18n>
                   Title is <strong>required</strong>
                 </mat-error>
               </mat-form-field>
@@ -44,20 +51,22 @@
           <tr>
             <td>
               <mat-form-field class="form-field">
-                <mat-label>Category</mat-label>
+                <mat-label i18n>Category</mat-label>
                 <input matInput formControlName="category" />
                 <mat-error
-                  *ngIf="productFormControl['category'].hasError('required')">
+                  *ngIf="productFormControl['category'].hasError('required')"
+                  i18n>
                   Category is <strong>required</strong>
                 </mat-error>
               </mat-form-field>
             </td>
             <td>
               <mat-form-field class="form-field">
-                <mat-label>Price</mat-label>
+                <mat-label i18n>Price</mat-label>
                 <input matInput formControlName="price" />
                 <mat-error
-                  *ngIf="productFormControl['price'].hasError('required')">
+                  *ngIf="productFormControl['price'].hasError('required')"
+                  i18n>
                   Price is <strong>required</strong>
                 </mat-error>
               </mat-form-field>
@@ -65,7 +74,7 @@
           </tr>
         </table>
         <mat-form-field class="form-field">
-          <mat-label>Description</mat-label>
+          <mat-label i18n>Description</mat-label>
           <textarea matInput formControlName="description"></textarea>
         </mat-form-field>
       </div>

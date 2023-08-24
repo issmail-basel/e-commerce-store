@@ -1,5 +1,5 @@
 <mat-toolbar color="header">
-  <a class="header__logo" [routerLink]="['/admin']"> e-commerce store </a>
+  <a class="header__logo" [routerLink]="['/admin']" i18n> e-commerce store </a>
   <span class="l-spacer"></span>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <img
@@ -10,7 +10,7 @@
   <mat-menu #menu="matMenu" xPosition="before">
     <button mat-menu-item (click)="logout.emit()">
       <mat-icon>exit_to_app</mat-icon>
-      <span>Logout</span>
+      <span i18n>Logout</span>
     </button>
   </mat-menu>
 </mat-toolbar>

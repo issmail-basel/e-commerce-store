@@ -1,6 +1,6 @@
 <header class="header" [class.header-fixed]="isHeaderFixed">
   <div class="header__logo">
-    <a [routerLink]="['/homepage']"> e-commerce store </a>
+    <a [routerLink]="['/homepage']" i18n> e-commerce store </a>
   </div>
   <div class="header__icons">
     <a
@@ -18,5 +18,5 @@
   </div>
 </header>
 <mat-menu #menu="matMenu">
-  <button (click)="logout.emit()" mat-menu-item>Log Out</button>
+  <button (click)="logout.emit()" mat-menu-item i18n>Log Out</button>
 </mat-menu>
