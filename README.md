@@ -18,6 +18,7 @@ This project is an Angular-based e-commerce store with a focus on modularity, re
 - **Auth Module**: Handles authentication-related components and functionalities.
 - **User Module**: Caters to the end-users with components for product display, product details, and related services.
 - **Shared Module**: Contains shared components like a language switcher.
+- **State Management with ngrx/data**: Implemented for products CRUD operations, ensuring a robust and maintainable state management solution.
 
 ## Setup
 
@@ -91,7 +92,7 @@ I would prefer **Enterprise Monorepo Angular Pattern**: Preferred for segregatin
 ### State management
 
 
-While `NGRX` is a powerful tool for state management in Angular applications, especially when combined with optimistic or pessimistic update strategies and pure functions, it was not utilized in this project. The reasons for this decision are:
+While `NGRX` is a powerful tool for state management in Angular applications, it was only used for crud operations using `NGRX/data` in this project. The reasons for this decision are:
 
 - **Tight Schedule**: The time constraints did not allow for the overhead required to set up and manage NGRX effectively.
   
@@ -100,5 +101,3 @@ While `NGRX` is a powerful tool for state management in Angular applications, es
 - **Overhead**: Writing NGRX code can introduce additional overead for creating the Actions, Reducers, State, Selectors, Effects, Resolvers etc.
 
 Instead, the application leverages Angular services combined with RxJS for state management. For instance, subjects are used to manage and reactively update user data throughout the application. This approach provides a balance between simplicity and reactivity, ensuring efficient data flow without the overhead of a more complex state management solution.
-
-I have previously created multiple apps, also led a team into creating an app with `NGRX`, also I have ongoing project with react which uses `Jotai` state management library
