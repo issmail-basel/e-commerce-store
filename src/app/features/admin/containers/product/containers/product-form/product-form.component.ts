@@ -11,6 +11,7 @@ import { ProductService } from '../../services/product.service';
 import { Product } from '../../models/product';
 import { switchMap } from 'rxjs';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { ProductEntityService } from '../../services/product-entity.service';
 
 @Component({
   selector: 'ecs-product-form',
@@ -50,7 +51,7 @@ export class ProductFormComponent {
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    private productService: ProductService,
+    private productService: ProductEntityService,
     private _snackBar: MatSnackBar,
     @Inject(LOCALE_ID) public locale: string
   ) {
@@ -60,7 +61,7 @@ export class ProductFormComponent {
         if (params['id']) {
           this.isEditMode = true;
           this.productId = params['id'];
-          this.productService.getSingleProducts(this.productId).subscribe({
+          this.productService.getByKey(this.productId).subscribe({
             next: response => {
               this.fillFormWithProduct(response);
             },
@@ -74,20 +75,6 @@ export class ProductFormComponent {
         console.log(err);
       },
     });
-    this.route.params
-      .pipe(
-        switchMap((param: Params) =>
-          this.productService.getSingleProducts(param['id'])
-        )
-      )
-      .subscribe({
-        next: response => {
-          console.log(response);
-        },
-        error: err => {
-          console.log(err);
-        },
-      });
   }
 
   get productFormControl() {
@@ -97,18 +84,16 @@ export class ProductFormComponent {
   addNew(formDirective: FormGroupDirective) {
     this.isSubmitted = true;
     if (this.productForm.valid) {
-      this.productService
-        .createProduct(this.productForm.value as Product)
-        .subscribe({
-          next: () => {
-            formDirective.resetForm();
-            this.isSubmitted = false;
-            this._snackBar.open('Added successfully', 'close');
-          },
-          error: (error: Error) => {
-            this._snackBar.open(error.message, 'close');
-          },
-        });
+      this.productService.add(this.productForm.value as Product).subscribe({
+        next: () => {
+          formDirective.resetForm();
+          this.isSubmitted = false;
+          this._snackBar.open('Added successfully', 'close');
+        },
+        error: (error: Error) => {
+          this._snackBar.open(error.message, 'close');
+        },
+      });
     }
   }
 
@@ -116,7 +101,7 @@ export class ProductFormComponent {
     this.isSubmitted = true;
     if (this.productForm.valid) {
       this.productService
-        .editProduct(this.productForm.value as Partial<Product>, this.productId)
+        .update({ ...this.productForm.value, id: +this.productId })
         .subscribe({
           next: response => {
             this.fillFormWithProduct(response);

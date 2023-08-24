@@ -30,6 +30,7 @@ import { AuthService } from 'src/app/core/services/auth.service';
   ],
 })
 export class AuthModule {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static forRoot(): ModuleWithProviders<any> {
     return {
       ngModule: AuthModule,
