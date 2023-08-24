@@ -19,6 +19,6 @@ export class UserComponent {
 
   logout() {
     this.authService.logout();
-    this.router.navigate(['auth/login']);
+    this.router.navigate(['/login']);
   }
 }

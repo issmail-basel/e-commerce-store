@@ -11,12 +11,14 @@ import {
   MAT_SNACK_BAR_DEFAULT_OPTIONS,
 } from '@angular/material/snack-bar';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { AuthModule } from './features/auth/auth.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule.forRoot(),
     BrowserAnimationsModule,
     HttpClientModule,
     MatSnackBarModule,
