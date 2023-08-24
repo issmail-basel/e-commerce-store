@@ -14,8 +14,14 @@ export class ApiInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
+    console.log(request.url);
+
+    let url = request.url;
+    if (url.includes('/product/')) url = url.replace('/product/', '/products/');
+    console.log(url);
+
     request = request.clone({
-      url: `${environment.baseURL}${request.url}`,
+      url: `${environment.baseURL}${url}`,
     });
     return next.handle(request);
   }

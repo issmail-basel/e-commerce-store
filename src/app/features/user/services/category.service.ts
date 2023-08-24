@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const categoriesAPI = 'products/categories';
+const categoriesAPI = '/products/categories';
 
 @Injectable({
   providedIn: 'root',

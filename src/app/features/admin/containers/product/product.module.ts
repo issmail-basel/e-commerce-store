@@ -11,6 +11,17 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import {
+  EntityDataService,
+  EntityDefinitionService,
+  EntityMetadataMap,
+} from '@ngrx/data';
+import { ProductEntityService } from './services/product-entity.service';
+import { ProductsResolver } from './services/product.resolver';
+
+const entityMetaData: EntityMetadataMap = {
+  Product: {},
+};
 
 @NgModule({
   declarations: [ProductTableComponent, ProductFormComponent],
@@ -26,5 +37,10 @@ import { MatInputModule } from '@angular/material/input';
     MatIconModule,
     MatInputModule,
   ],
+  providers: [ProductEntityService, ProductsResolver],
 })
-export class ProductModule {}
+export class ProductModule {
+  constructor(private eds: EntityDefinitionService) {
+    eds.registerMetadataMap(entityMetaData);
+  }
+}
