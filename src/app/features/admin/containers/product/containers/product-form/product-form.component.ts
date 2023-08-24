@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Inject, LOCALE_ID } from '@angular/core';
 import {
   FormBuilder,
   FormControl,
@@ -18,6 +18,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./product-form.component.scss'],
 })
 export class ProductFormComponent {
+  currentLocale!: 'en-US' | 'ar-SA';
   productForm: FormGroup = this.fb.group({
     title: ['', Validators.required],
     description: [''],
@@ -50,8 +51,10 @@ export class ProductFormComponent {
     private fb: FormBuilder,
     private route: ActivatedRoute,
     private productService: ProductService,
-    private _snackBar: MatSnackBar
+    private _snackBar: MatSnackBar,
+    @Inject(LOCALE_ID) public locale: string
   ) {
+    this.currentLocale = locale as 'en-US' | 'ar-SA';
     this.route.params.subscribe({
       next: (params: Params) => {
         if (params['id']) {
