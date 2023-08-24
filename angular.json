@@ -78,7 +78,7 @@
               "outputPath": "dist/e-commerce-store/ar",
               "localize": ["ar-SA"],
               "i18nMissingTranslation": "error",
-              "baseHref": "/ar/"
+              "baseHref": "/"
             }
           },
           "defaultConfiguration": "production"
