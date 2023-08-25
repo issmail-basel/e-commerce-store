@@ -10,15 +10,16 @@ This project is an Angular-based e-commerce store with a focus on modularity, re
 - **Admin UI Inspiration**: The design and layout of the admin section are inspired by Google account settings.
 - **Higher Order Containers Component**: Adopted this pattern for better separation of concerns and reusability.
 - **Interceptors**: Used for setting the baseURL for API requests. This can be extended to handle tokens and language data from the server.
+- **State Management with ngrx/data**: Implemented for products CRUD operations, ensuring a robust and maintainable state management solution.
 
 ## Project Structure
 
 - **Core Module**: Contains core functionalities like guards, interceptors, and authentication services.
-- **Admin Module**: Manages the admin functionalities with components for the dashboard and product management.
-- **Auth Module**: Handles authentication-related components and functionalities.
-- **User Module**: Caters to the end-users with components for product display, product details, and related services.
+- **Features Module**: 
+  - **Admin Module**: Manages the admin functionalities with components for the dashboard and product management.
+  - **Auth Module**: Handles authentication-related components and functionalities.
+  - **User Module**: Caters to the end-users with components for product display, product details, and related services.
 - **Shared Module**: Contains shared components like a language switcher.
-- **State Management with ngrx/data**: Implemented for products CRUD operations, ensuring a robust and maintainable state management solution.
 
 ## Setup
 
