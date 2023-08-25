@@ -11,6 +11,7 @@ This project is an Angular-based e-commerce store with a focus on modularity, re
 - **Higher Order Containers Component**: Adopted this pattern for better separation of concerns and reusability.
 - **Interceptors**: Used for setting the baseURL for API requests. This can be extended to handle tokens and language data from the server.
 - **State Management with ngrx/data**: Implemented for products CRUD operations, ensuring a robust and maintainable state management solution.
+- **ESLint and Prettify Integration**: Ensures consistent code style and enforces best practices across the project.
 
 ## Project Structure
 
